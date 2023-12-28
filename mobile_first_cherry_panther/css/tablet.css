@@ -1,0 +1,33 @@
+header {
+  height: 234px;
+}
+.header__image-container {
+  margin-top: 20px;
+}
+.header__title-container .header__button {
+  top: 215px;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main__question-cards {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.question-cards__product-logo {
+  top: -1rem;
+}
+
+.main__right {
+  width: 70%;
+  order: 2;
+}
+.main__left {
+  width: 30%;
+  margin: 0 auto;
+  justify-content: center;
+}

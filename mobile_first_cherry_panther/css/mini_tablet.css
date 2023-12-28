@@ -1,0 +1,26 @@
+.main__left {
+  
+}
+.main__exchange-container {
+
+}
+.main__spaces-section {
+
+}
+.main__question-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.question-cards__card-1{
+  width: 50%;
+}
+.question-cards__card-2{
+  width: 50%;
+}
+.question-cards__card-3 {
+  width: 50%;
+}
+.question-cards__card-4 {
+  width: 50%;
+}
