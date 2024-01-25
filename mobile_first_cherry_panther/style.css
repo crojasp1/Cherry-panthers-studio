@@ -45,7 +45,6 @@ header {
   min-width: 288px;
   max-width: 900px;
   height: 218px;
-  margin-top: 20px;
   padding: 0.6rem;
   text-align: center;
   align-self: center;
@@ -91,6 +90,38 @@ header {
   width: 9px;
   height: 9px;
   padding: 9px;
+}
+nav{
+  border-bottom: 1px solid var(--grey);
+  height: 40px;
+}
+.header__navegation-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--just-white);
+  align-items: center;
+}
+.header__left-side button{
+  width: 25px;
+  height: 25px;
+}
+.header__right-side {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  
+}
+
+.header__right-side img {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: var(--just-white);
+  margin-right: 3px;
+}
+.header__right-side a {
+  display: none;
+  text-decoration: none;
 }
 .main__exchange-container {
   display: flex;

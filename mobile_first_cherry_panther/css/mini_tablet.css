@@ -1,3 +1,12 @@
+
+.header__right-side a {
+  display: block;
+  margin-right: 4px;
+}
+.header__right-side a :hover {
+  color: var(--cherry);
+
+}
 .main__left {
   
 }
