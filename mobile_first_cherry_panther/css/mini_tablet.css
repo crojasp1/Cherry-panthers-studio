@@ -1,11 +1,16 @@
 
-.header__right-side a {
+.right-side__email {
   display: block;
   margin-right: 4px;
+  cursor: pointer;
 }
-.header__right-side a :hover {
+.right-side__email :hover {
   color: var(--cherry);
 
+}
+.nav__display-menu {
+  right: 71px;
+  top: 30px;
 }
 .main__left {
   

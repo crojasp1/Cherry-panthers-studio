@@ -19,6 +19,9 @@ html {
   --just-white: #FAF8F7;
   --white: #fff;
 }
+.inactive {
+  display: none;
+}
 
 header {
   position: relative;
@@ -100,6 +103,8 @@ nav{
   justify-content: space-around;
   background-color: var(--just-white);
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 .header__left-side button{
   width: 25px;
@@ -118,9 +123,25 @@ nav{
   border-radius: 3px;
   background-color: var(--just-white);
   margin-right: 3px;
+  cursor: pointer;
 }
-.header__right-side a {
+.right-side__email {
   display: none;
+  text-decoration: none;
+}
+.nav__display-menu {
+  position: absolute;
+  padding: 6px;
+  background-color: white;
+  border: 1px solid var(--black);
+  border-radius: 6px;
+  right: 0;
+  top: 30px;
+}
+.nav__display-menu li {
+  list-style: none;
+}
+.nav__display-menu a {
   text-decoration: none;
 }
 .main__exchange-container {
