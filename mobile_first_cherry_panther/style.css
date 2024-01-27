@@ -129,6 +129,7 @@ nav{
   display: none;
   text-decoration: none;
 }
+/*Menu in Desktop*/
 .nav__display-menu {
   position: absolute;
   padding: 6px;
@@ -143,6 +144,32 @@ nav{
 }
 .nav__display-menu a {
   text-decoration: none;
+}
+/*Menu in Mobile*/
+.nav__mobile-menu {
+  position: absolute;
+  width: 200px;
+  padding: 8px;
+  margin: 3px 0 0;
+  top: 40px;
+  left: 17px;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  line-height: 60px;
+}
+
+.nav__mobile-menu li {
+  list-style: none;
+}
+.nav__mobile-menu a {
+  text-decoration: none;
+} 
+.mobile-menu__bold {
+  font-weight: bold;
+}
+.mobile-menu__sign-out {
+  color: green;
 }
 .main__exchange-container {
   display: flex;

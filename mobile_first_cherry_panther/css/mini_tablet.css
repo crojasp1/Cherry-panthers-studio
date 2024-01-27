@@ -1,4 +1,10 @@
 
+.left-side__button {
+  display: none;
+}
+.nav__mobile-menu {
+  display: none;
+}
 .right-side__email {
   display: block;
   margin-right: 4px;
