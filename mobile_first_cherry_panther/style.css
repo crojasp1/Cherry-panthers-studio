@@ -149,18 +149,29 @@ nav{
 .nav__mobile-menu {
   position: absolute;
   width: 200px;
-  padding: 8px;
+
+  padding: 14px;
   margin: 3px 0 0;
   top: 40px;
   left: 17px;
   background-color: var(--white);
   border: 1px solid var(--black);
   border-radius: 5px;
-  line-height: 60px;
+
+}
+.nav__mobile-menu h2 {
+  margin-bottom: 60px;
+}
+.nav__mobile-menu ul {
+  margin-bottom: 60px;
 }
 
+.nav__mobile-menu ul:nth-child(2) {
+  border-bottom: 1px solid var(--grey);
+} 
 .nav__mobile-menu li {
   list-style: none;
+  margin-bottom: 30px;
 }
 .nav__mobile-menu a {
   text-decoration: none;
@@ -171,6 +182,13 @@ nav{
 .mobile-menu__sign-out {
   color: green;
 }
+.nav__mobile-menu .mobile-menu__last-ul {
+  margin-bottom: 0px;
+}
+.nav__mobile-menu .mobile-menu__last-ul .mobile-menu__sign-out{
+  margin-bottom: 0px;
+}
+
 .main__exchange-container {
   display: flex;
   width: 100%;
