@@ -18,6 +18,20 @@
   right: 71px;
   top: 30px;
 }
+/* Propiedades del carrito de compras */
+.selected-product {
+
+  width: 400px;
+  right: 0;
+  z-index: 100;
+  border-radius: 5px;
+}
+.selected-product__images {
+  margin-left: 20px;
+}
+.selected-product__total {
+  margin-left: 60px;
+}
 .main__left {
   
 }
