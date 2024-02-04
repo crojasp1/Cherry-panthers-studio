@@ -13,14 +13,26 @@ navEmail.addEventListener('click', toggleEmailMenu);
 
 menuLeftItem.addEventListener('click', toggleLeftItem);
 
+
 function toggleEmailMenu() {
   navDisplayMenu.classList.toggle('inactive');
 }
 
+
 function toggleLeftItem() {
+  const isCartProductsClosed = cartproducts.classList.contains('inactive');
+
+  if(!isCartProductsClosed){
+    cartproducts.classList.add('inactive');
+  }
   navMobileMenu.classList.toggle('inactive');
+
 }
 
 function toggleSelectedItemsMenu() {
+  const isNavMobileMenuClosed = navMobileMenu.classList.contains('inactive');
+  if(!isNavMobileMenuClosed){
+    navMobileMenu.classList.add('inactive');
+  }
   cartproducts.classList.toggle('inactive');
 }
