@@ -265,6 +265,7 @@ nav{
 .selected-product button:active {
   transform: scale(0.9);
 }
+/*Propiedades del main */
 .main__exchange-container {
   display: flex;
   width: 100%;
@@ -665,9 +666,7 @@ text-decoration: none;
   width: 100%;
   height: 100vh;
   background-color: var(--white);
-  z-index: 100;
-  position: absolute;
-  top: 0;
+
 }
 .main-header__card-container {
   min-width: 320px;
