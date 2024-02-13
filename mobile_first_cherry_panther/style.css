@@ -22,6 +22,14 @@ html {
 .inactive {
   display: none;
 }
+/*Class to do the screen dark behind the menus*/
+.dark {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
 
 header {
   position: relative;

@@ -50,3 +50,9 @@
 .question-cards__card-4 {
   width: 50%;
 }
+/*Detalles de los productos*/
+.product-detail {
+  width: 50%;
+  left: 200px;
+  margin-top: 10px;
+}

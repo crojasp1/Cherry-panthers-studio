@@ -1,11 +1,14 @@
 const navEmail = document.querySelector('.right-side__email');
 const navDisplayMenu = document.querySelector('.nav__display-menu');
 const cartproducts = document.querySelector('.selected-product');
-const mainHeaderCardContainer = document.querySelector('.main-header__card-container')
+const mainHeaderCardContainer = document.querySelector('.main-header__card-container');
+const closeArrow = document.querySelector('.product-detail__close');
 
 const navImage = document.querySelector('.navegation-bar__img');
 const menuLeftItem = document.querySelector('.left-side__button');
 const navMobileMenu = document.querySelector('.nav__mobile-menu');
+const productDetail = document.querySelector('.product-detail ');
+
 
 navImage.addEventListener('click', toggleSelectedItemsMenu);
 
@@ -13,33 +16,51 @@ navEmail.addEventListener('click', toggleEmailMenu);
 
 menuLeftItem.addEventListener('click', toggleLeftItem);
 
+closeArrow.addEventListener('click', closeProductDetail);
+
+
+
 
 function toggleEmailMenu() {
   navDisplayMenu.classList.toggle('inactive');
 }
 
-
 function toggleLeftItem() {
   const isCartProductsClosed = cartproducts.classList.contains('inactive');
+  productDetail.classList.add('inactive');
 
   if(!isCartProductsClosed){
     cartproducts.classList.add('inactive');
+
   }
-  navMobileMenu.classList.toggle('inactive');
+    navMobileMenu.classList.toggle('inactive');
 
 }
 
 function toggleSelectedItemsMenu() {
   const isNavMobileMenuClosed = navMobileMenu.classList.contains('inactive');
+  productDetail.classList.add('inactive');
+
   if(!isNavMobileMenuClosed){
     navMobileMenu.classList.add('inactive');
   }
   cartproducts.classList.toggle('inactive');
 }
 
+function openProductDetail() {
+  productDetail.classList.remove('inactive');
+  navMobileMenu.classList.add('inactive');
+  cartproducts.classList.add('inactive');
+
+}
+function closeProductDetail() {
+  productDetail.classList.add('inactive');
+}
+
 /* Se procede a crear lista de objetos para simular info en base de datos*/
 
 const productos = [{nombre:"Mustang", tipo:"Deportivo", valor: 160000, descripcion: "Auto deportivo de lujo unico,", image: './assets/images/autoNaranjaPeque.jpg'},
+                  {nombre:"GTR", tipo:"Clasico", valor: 190000, descripcion: "Auto clasico de dos puertas super potente", image: './assets/images/autoNegroPeque.jpg'},
                   {nombre:"GTR", tipo:"Clasico", valor: 190000, descripcion: "Auto clasico de dos puertas super potente", image: './assets/images/autoNegroPeque.jpg'},
                   {nombre:"Ferrari", tipo:"Elegante", valor: 210000, descripcion: "Auto de gran valoracion con busnas prestaciones", image: './assets/images/autoRojoPeque.jpg'}];
 
@@ -66,6 +87,7 @@ for (producto of productos){
 
   const image = document.createElement('img');
   image.setAttribute('src', producto.image);
+  image.addEventListener('click', openProductDetail);
 
   cardContainerImage.appendChild(image);
 
