@@ -1,8 +1,11 @@
+nav {
+  height: 40px;
+}
 header {
   height: 234px;
 }
 .header__image-container {
-  margin-top: 20px;
+
 }
 .header__title-container .header__button {
   top: 215px;
@@ -30,4 +33,8 @@ main {
   width: 30%;
   margin: 0 auto;
   justify-content: center;
+}
+.shopping-site {
+  display: flex;
+  margin: 0 auto;
 }
