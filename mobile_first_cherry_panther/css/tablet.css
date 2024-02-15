@@ -38,3 +38,10 @@ main {
   display: flex;
   margin: 0 auto;
 }
+/*info del header*/
+.header__info a {
+  margin-top: 30px;
+}
+.header__info p{
+  font-size: 1.3rem;
+}
