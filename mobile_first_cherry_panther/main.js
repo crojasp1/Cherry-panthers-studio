@@ -20,7 +20,8 @@ menuLeftItem.addEventListener('click', toggleLeftItem);
 
 /*closeArrow.addEventListener('click', closeProductDetail);*/
 
-
+//Creamos el eventListener para escuchar las imagenes desde el container padre:
+mainHeaderCardContainer.addEventListener('click', openProductDetail);
 
 
 function toggleEmailMenu() {
@@ -49,18 +50,26 @@ function toggleSelectedItemsMenu() {
   cartproducts.classList.toggle('inactive');
 }
 
-function openProductDetail() {
+function openProductDetail(event) {
+  if(event.target.nodename === "img" || "H3" || "p"){
   productDetail.classList.remove('inactive');
   navMobileMenu.classList.add('inactive');
   cartproducts.classList.add('inactive');
 
-  
+  }
 
 }
 function closeProductDetail() {
   productDetail.classList.add('inactive');
 }
 
+//API Internalización:
+
+const formatPrice = (price)=>{
+  const newPrice = new window.Intl.NumberFormat('en-En', {style: "currency", currency: "USD"}).format(price);
+
+  return newPrice;
+}
 /* Se procede a crear lista de objetos para simular info en base de datos*/
 
 const productos = [{nombre:"Mustang", tipo:"Deportivo", valor: 160000, descripcion: "Auto deportivo de lujo unico,", image: './assets/images/autoNaranjaPeque.jpg'},
@@ -92,7 +101,7 @@ for (producto of productos){
 
   const image = document.createElement('img');
   image.setAttribute('src', producto.image);
-  image.addEventListener('click', openProductDetail);
+  //image.addEventListener('click', openProductDetail);
 
   cardContainerImage.appendChild(image);
 
@@ -106,7 +115,7 @@ for (producto of productos){
   specificationType.innerText = producto.tipo;
 
   const specificationPrice = document.createElement('p');
-  specificationPrice.innerText = 'COP ' + producto.valor;
+  specificationPrice.innerText = formatPrice(producto.valor);
 
   const cardDescription = document.createElement('p');
   cardDescription.innerText = producto.descripcion;
