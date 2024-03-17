@@ -1,3 +1,5 @@
+import { registerImage } from "./lazy";
+
 const navEmail = document.querySelector('.right-side__email');
 const navDisplayMenu = document.querySelector('.nav__display-menu');
 const cartproducts = document.querySelector('.selected-product');
@@ -101,7 +103,9 @@ for (producto of productos){
 
   const image = document.createElement('img');
   image.setAttribute('src', producto.image);
-  //image.addEventListener('click', openProductDetail);
+  //Lazy loading para las imagenes
+  registerImage(image);
+  //image.addEventListener('click', openProductDetail); Se translado el llamado a la raiz. "Event delegation"
 
   cardContainerImage.appendChild(image);
 
